@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+clear
+
+echo 'LOGIC SIMULATOR'
+echo 'v0.85'
+echo 'Authors:'
+echo 'Sai Bhargav Yalamanchi'
+echo 'Shaimak Reddy'
+echo ''
+echo 'Input file path -'
+
+read file
+
+if [[ $file != *.xml ]]; then 
+	echo "Bad input! Exiting..."
+	exit
+fi
+
+
+echo 'Output file name -'
+
+read out
+
+python makecircuit.py $out $file
+
+echo ''
+echo 'Test bench created'
+
+vim $out

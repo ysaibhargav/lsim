@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+
+  <!-- property keys -->
+  <key id="key0" for="graph" attr.name="inputs" attr.type="int" />
+  <key id="key5" for="graph" attr.name="outputs" attr.type="int" />
+  <key id="key1" for="node" attr.name="num_inputs" attr.type="int" />
+   <default>0</default>
+  <key id="key2" for="node" attr.name="type" attr.type="string" />
+  <key id="key3" for="node" attr.name="pos" attr.type="int">
+   <default>0</default>
+  </key>
+  <key id="key4" for="node" attr.name="delay" attr.type="int">
+   <default>0</default>
+  </key>
+
+  <graph id="G" edgedefault="directed">
+
+   <!-- graph properties -->
+   <data key="key0">4</data>
+   <data key="key5">1</data>
+
+   <!-- vertices -->
+   <node id="n0">
+      <data key="key1">2</data>
+      <data key="key3">0</data>
+      <data key="key2">and</data>
+    </node>
+    <node id="n1">
+      <data key="key1">2</data>
+      <data key="key3">0</data>
+      <data key="key2">and</data>
+    </node>
+    <node id="n2">
+      <data key="key1">0</data>
+      <data key="key3">1</data>
+      <data key="key2">or</data>
+    </node>
+
+   <!-- edges -->
+   <edge id="e0" source="n0" target="n2">
+   </edge>
+   <edge id="e1" source="n1" target="n2">
+   </edge>
+   <edge id="e2" source="n2" target="n1">
+   </edge>
+    
+  </graph>
+</graphml>

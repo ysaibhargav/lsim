@@ -1,0 +1,28 @@
+module test;
+	/*reg a, b;
+	integer d;
+	wire oA, oB, o;
+	andgate A(.a(1), .b(b), .o(oA), .d(0));
+	notgate B(.a(b), .o(oB), .d(d));
+	andgate C(.a(oA), .b(oB), .o(o), .d(0));
+	initial	begin
+		d = 1'b1;
+		a = 0;
+		b = 0;
+		#5 a = 1;
+		#5 b = 1;	
+	end*/
+	reg[31:0] a, d;
+	reg[3:0] q;
+	wire o;
+	nandgate A(.a(a), .d(0), .o(o));
+	initial begin
+		a = 32'b11111111111111111111111111111111;
+		#5 a = 32'b11111111111111111111110011111111;
+		#5 a = 0;
+		//#10 q = o;
+		q = 4'b1100 + {o, 1'b1};
+	end
+	initial 
+	$monitor("Output is %b. Time is %t. Q is %b.", o, $time, q);
+endmodule
